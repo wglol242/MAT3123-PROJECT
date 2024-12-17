@@ -1,17 +1,87 @@
-### 데이터셋 정보  
+# Project Title
 
-- **다중 모달 스캔**이 NIfTI 파일 형식(`.nii.gz`)으로 제공됨  
-- 동일한 영역의 **4가지 정보 채널** (4개의 서로 다른 볼륨):  
-  i. **Native (T1)**  
-  ii. **조영제 주입 후 T1 강조 (T1CE)**  
-  iii. **T2 강조 (T2)**  
-  iv. **T2 액체 감쇠 역전 회복 (FLAIR)** 볼륨  
+One Paragraph of project description goes here
 
-- **모든 이미지 데이터셋**은 수작업으로 분할되었으며, 경험이 풍부한 신경방사선과 전문의의 검토를 거쳤음.  
+## Getting Started
 
-- **주석 (레이블)**:  
-  - **Label 0**: 레이블이 없는 볼륨  
-  - **Label 1**: 괴사 및 비강조 종양 핵심 (NCR/NET)  
-  - **Label 2**: 종양 주변 부종 (ED)  
-  - **Label 3**: 없음 (모든 볼륨에 해당 픽셀이 존재하지 않음)  
-  - **Label 4**: 조영 증강 종양 (ET)  
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+```
+Give examples
+```
+
+### Installing
+
+A step by step series of examples that tell you how to get a development env running
+
+Say what the step will be
+
+```
+Give the example
+```
+
+And repeat
+
+```
+until finished
+```
+
+End with an example of getting some data out of the system or using it for a little demo
+
+## Running the tests
+
+Explain how to run the automated tests for this system
+
+### Break down into end to end tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system
+
+## Built With
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
+## Authors
+
+* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc
