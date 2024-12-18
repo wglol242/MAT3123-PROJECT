@@ -1,6 +1,6 @@
 # 뇌종양 이미지 분할 및 데이터베이스를 활용한 증상 연계
 
-One Paragraph of project description goes here
+Medical image segmentation
 
 ## Getting Started
 
