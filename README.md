@@ -259,12 +259,8 @@ IoU (Intersection over Union): 예측된 영역과 실제 영역의 겹침 비�
 
 ***- 필요한 라이브러리***
 1. TensorFlow
-2. classification-models-3D
-3. efficientnet-3D
-4. segmentation-models-3D
-5. patchify
-6. tifffile
-7. psycopg
+2. segmentation-models-3D
+3. psycopg
 
 ## 프로젝트 사용법 
 
