@@ -265,9 +265,9 @@ IoU (Intersection over Union): 예측된 영역과 실제 영역의 겹침 비�
 
 ***- 필요한  데이터셋***
 
-BraTS2020 Dataset
+  BraTS2020 Dataset
 
-https://www.kaggle.com/datasets/awsaf49/brats20-dataset-training-validation
+  https://www.kaggle.com/datasets/awsaf49/brats20-dataset-training-validation
 
 ## 프로젝트 사용법 
 
