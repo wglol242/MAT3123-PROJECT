@@ -37,6 +37,9 @@
 
 ### 프로젝트 필수 개념
 
+<details>
+<summary>U-Net</summary>
+
 #### 1. U-Net
 ![image](https://github.com/user-attachments/assets/2b3a9308-19ed-48ca-9c7f-ad903a5ea0f5)
 
@@ -159,6 +162,10 @@ U-Net은 Biomedical 분야에서 이미지 분할(Image Segmentation)을 목적�
 위와 같은 구조로, U-Net은 총 23개의 Fully Convolutional Layers를 갖춘 네트워크로 설계되었습니다. 
 
 이러한 구성은 Localization(위치 정보)와 Context(의미 정보)를 균형 있게 처리하여 높은 성능의 이미지 분할 결과를 제공합니다.
+</details>
+
+<details>
+<summary>Dice 손실 함수</summary>
 
 #### 2. Dice 손실 함수
 
@@ -169,20 +176,86 @@ DICE 손실 함수(Dice Loss)는 주로 의료 영상 분석과 같은 분야에
 - DICE 계수
 
   ![image](https://github.com/user-attachments/assets/243c5d91-9e78-4335-9161-d9cddaab58e1)
+
+  ![image](https://github.com/user-attachments/assets/ffbc778b-4799-44d7-8eea-f39da78e14b5)
   
 - DICE 손실함수
   
   ![image](https://github.com/user-attachments/assets/47d7ca0c-a710-4203-acfb-21141e9d3298)
   
-  DICE 손실 함수는 1에서 DICE 계수를 뺀 값으로 정의됩니다. 이는 계수가 1에 가까울수록 손실이 작아지며, 예측과 실제 값 사이의 유사도가 높음을 의미합니다
+  DICE 손실 함수는 1에서 DICE 계수를 뺀 값으로 정의됩니다.
+  이는 계수가 1에 가까울수록 손실이 작아지며, 예측과 실제 값 사이의 유사도가 높음을 의미합니다.
+
+- 가중 DICE 손실 함수
+
+  ![image](https://github.com/user-attachments/assets/a382ccd5-f486-4d5e-9b85-cb297f0bf087)
+
+  가중 DICE 손실 함수는 class_weights를 통해 클래스별 중요도를 설정할 수 있습니다.
+
+  코드에서는 가중 DICE 손실 함수를 사용했고 모두 동일하게 0.25를 부여했습니다.
+
+   ``` python
+  
+  import segmentation_models_3D as sm
+  dice_loss = sm.losses.DiceLoss(class_weights=np.array([wt0, wt1, wt2, wt3]))  
+  
+  ``` 
+</details>
+
+<details>
+<summary>Focal 손실 함수</summary>
 
 #### 3. Focal 손실 함수
 
-#### 4. 정확도 및 IoU 지표
+Focal 손실 함수는 불균형 데이터 문제를 해결하기 위해 설계된 손실 함수로, 어려운 샘플에 더 큰 가중치를 부여하여 학습을 집중시킵니다.
+
+   ``` python
+  
+  focal_loss = sm.losses.CategoricalFocalLoss()  # Focal 손실 함수
+  
+  ``` 
+
+</details>
+
+<details>
+<summary>전체 손실 함수</summary>
+
+#### 4. 전체 손실 함수
+
+Dice Loss: 분할 정확도를 높이기 위해 예측 마스크와 실제 마스크 간의 겹침 정도를 평가합니다.
+
+Focal Loss: 클래스 불균형 문제를 해결하고 어려운 샘플에 더 집중하도록 설계합니다.
+
+전체 손실 함수: 두 손실을 합산하여 분할 성능(Localization)과 학습 안정성(Class Imbalance 해결)을 동시에 개선했습니다.
+
+   ``` python
+  
+  total_loss = dice_loss + (1 * focal_loss)  # 전체 손실 = Dice + Focal
+  
+  ``` 
+</details>
+
+<details>
+<summary>정확도 및 IoU 지표</summary>
+
+#### 5. 정확도 및 IoU 지표
+정확도 (Accuracy): 전체 픽셀 중 올바르게 예측한 비율입니다.
+
+IoU (Intersection over Union): 예측된 영역과 실제 영역의 겹침 비율입니다.
+
+
+   ``` python
+  
+  metrics = ['accuracy', sm.metrics.IOUScore(threshold=0.5)]  # 정확도 및 IoU 지표
+  
+  ```
+
+</details>
 
 ## 프로젝트 설치 및 실행법
 
 A step by step series of examples that tell you how to get a development env running
+
 
 Say what the step will be
 
