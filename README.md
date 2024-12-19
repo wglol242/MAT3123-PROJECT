@@ -304,11 +304,18 @@ IoU (Intersection over Union): 예측된 영역과 실제 영역의 겹침 비�
 ## 학습 결과
 
 ![다운로드](https://github.com/user-attachments/assets/adb3e252-8c23-4bae-8479-d0ff57284466)
+
 ![다운로드 (1)](https://github.com/user-attachments/assets/73bc2d2f-20d7-485c-87ec-d2bd8c1fe9d9)
 
+![Figure_1](https://github.com/user-attachments/assets/7ceb58ca-fe59-4938-8f72-167344e76340)
 
 ## 프로젝트 결과
+![1](https://github.com/user-attachments/assets/2c6631e4-8537-4bd2-ab49-be55996abc23)
 
+![2](https://github.com/user-attachments/assets/61c588e3-eec2-42c5-9d1a-65d9aef93777)
 
+![3](https://github.com/user-attachments/assets/046bc788-71a4-402d-983a-e0ee8f42cf47)
+
+![5](https://github.com/user-attachments/assets/d6644679-a612-406d-bf4b-b34c6cc8b1e1)
 
 ## 참고자료
