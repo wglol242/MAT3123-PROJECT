@@ -398,6 +398,14 @@ IoU 0.8177로 높은 정확도로 세그먼트 수행했습니다.
 
 ![5](https://github.com/user-attachments/assets/d6644679-a612-406d-bf4b-b34c6cc8b1e1)
 
+## 보완점
+
+처음에는 이미지를 세그먼트하여 종양 부위를 좌표로 감지하고, 자동으로 손상 영역을 시각화하는 시스템을 구현하려 했으나, 기술적 한계로 인해 실패했습니다. 
+
+이로 인해 현재는 사람이 직접 종양 부위를 확인해야 하는 불편함이 있습니다. 
+
+따라서 차기에는 YOLO나 Faster R-CNN과 같은 기술을 활용하여 이러한 한계를 극복할 예정입니다.
+
 ## 참고자료
 
 https://velog.io/@joongwon00/3D-UNET%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-CTMRI-Image-segmentation-3.-%EC%BD%94%EB%93%9C-%EB%8F%8C%EB%A6%AC%EA%B8%B0
