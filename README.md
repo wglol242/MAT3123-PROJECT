@@ -282,34 +282,25 @@ IoU (Intersection over Union): 예측된 영역과 실제 영역의 겹침 비�
   손실 함수 및 평가지표를 설정하고, 학습 결과를 시각화합니다.
 
 ***load.py***
-: 테스트 이미지의 예측 결과 그래프와 DB에서 환자 데이터나 병원 데이터를 출력합니다.
-  IoU 계산 값을 보여줍니다.
+: 모델을 로드하여 IoU 계산 및 시각화를 통해 성능을 평가합니다.
+
+***search.py***
+: 학습된 모델을 사용하여 예측을 수행하고 데이터베이스에서 관련 정보를 검색합니다.
+  환자 정보와 뇌 증상을 기반으로 병원 데이터를 시각화하여 제공합니다.
 
 ***db.py***
 : 데이터베이스 연결 및 환자, 뇌 증상, 병원 데이터를 조회하는 함수들을 제공합니다.
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+### 파일의 순서와 역할 
 
 ## 학습 결과
 
-Explain what these tests test and why
+![다운로드](https://github.com/user-attachments/assets/adb3e252-8c23-4bae-8479-d0ff57284466)
+![다운로드 (1)](https://github.com/user-attachments/assets/73bc2d2f-20d7-485c-87ec-d2bd8c1fe9d9)
 
-```
-Give an example
-```
 
 ## 프로젝트 결과
 
-Add additional notes about how to deploy this on a live system
+
 
 ## 참고자료
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
