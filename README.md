@@ -1,4 +1,5 @@
 # 뇌 종양 이미지 분할 및 데이터베이스를 활용한 증상 연계
+***2020272037 의공학부 김원진***
 
 >Project idea 12. Medical Image Segmentation
 >-------------------------------------------
@@ -252,28 +253,40 @@ IoU (Intersection over Union): 예측된 영역과 실제 영역의 겹침 비�
 
 </details>
 
-## 프로젝트 설치 및 실행법
+## 프로젝트 설치
 
-A step by step series of examples that tell you how to get a development env running
-
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+***- 필요한 라이브러리***
+1. TensorFlow
+2. classification-models-3D
+3. efficientnet-3D
+4. segmentation-models-3D
+5. patchify
+6. tifffile
+7. psycopg
 
 ## 프로젝트 사용법 
 
-Explain how to run the automated tests for this system
+### 각 파일의 역할
+
+***get_data.py*** 
+: 의료 이미지 데이터셋(MICCAI BraTS 2020)을 정규화 하고 유용한 데이터를 필터링합니다.
+
+***custom_datagen.py***
+: 이미지 및 마스크 데이터를 로드하고 배치(batch) 단위로 반환합니다.
+
+***unet.py***
+: 3D U-Net 모델 구조를 정의합니다.
+
+***train.py***
+: 학습 데이터와 검증 데이터를 사용하여 3D U-Net 모델을 학습시킵니다.
+  손실 함수 및 평가지표를 설정하고, 학습 결과를 시각화합니다.
+
+***load.py***
+: 테스트 이미지의 예측 결과 그래프와 DB에서 환자 데이터나 병원 데이터를 출력합니다.
+  IoU 계산 값을 보여줍니다.
+
+***db.py***
+: 데이터베이스 연결 및 환자, 뇌 증상, 병원 데이터를 조회하는 함수들을 제공합니다.
 
 ### Break down into end to end tests
 
