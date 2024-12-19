@@ -272,7 +272,7 @@ IoU (Intersection over Union): 예측된 영역과 실제 영역의 겹침 비�
 
 ***get_data.py*** 
 
-: 의료 이미지 데이터셋(MICCAI BraTS 2020)을 정규화 하고 유용한 데이터를 필터링합니다.
+의료 이미지 데이터셋(MICCAI BraTS 2020)을 정규화 하고 유용한 데이터를 필터링합니다.
 
 ***custom_datagen.py***
 
@@ -321,3 +321,10 @@ IoU (Intersection over Union): 예측된 영역과 실제 영역의 겹침 비�
 ![5](https://github.com/user-attachments/assets/d6644679-a612-406d-bf4b-b34c6cc8b1e1)
 
 ## 참고자료
+
+https://velog.io/@joongwon00/3D-UNET%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-CTMRI-Image-segmentation-3.-%EC%BD%94%EB%93%9C-%EB%8F%8C%EB%A6%AC%EA%B8%B0
+
+https://medium.com/@msmapark2/u-net-%EB%85%BC%EB%AC%B8-%EB%A6%AC%EB%B7%B0-u-net-convolutional-networks-for-biomedical-image-segmentation-456d6901b28a
+
+https://bruders.tistory.com/77
+
