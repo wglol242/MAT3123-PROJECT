@@ -272,34 +272,34 @@ https://www.kaggle.com/datasets/awsaf49/brats20-dataset-training-validation
 
 ### 각 파일의 역할
 
-***get_data.py*** 
+***`get_data.py`*** 
 
 의료 이미지 데이터셋(MICCAI BraTS 2020)을 정규화 하고 유용한 데이터를 필터링합니다.
 
-***custom_datagen.py***
+***`custom_datagen.py`***
 
 이미지 및 마스크 데이터를 로드하고 배치(batch) 단위로 반환합니다.
 
-***unet.py***
+***`unet.py`***
 
 3D U-Net 모델 구조를 정의합니다.
 
-***train.py***
+***`train.py`***
 
 학습 데이터와 검증 데이터를 사용하여 3D U-Net 모델을 학습시킵니다.
   손실 함수 및 평가지표를 설정하고, 학습 결과를 시각화합니다.
 
-***load.py***
+***`load.py`***
 
 모델을 로드하여 IoU 계산 및 시각화를 통해 성능을 평가합니다.
 
-***search.py***
+***`search.py`***
 
 학습된 모델을 사용하여 예측을 수행하고 데이터베이스에서 관련 정보를 검색합니다. 
 
 환자 정보와 뇌 증상을 기반으로 병원 데이터를 시각화하여 제공합니다.
 
-***db.py***
+***`db.py`***
 
 데이터베이스 연결 및 환자, 뇌 증상, 병원 데이터를 조회하는 함수들을 제공합니다.
 
