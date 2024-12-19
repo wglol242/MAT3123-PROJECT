@@ -262,6 +262,12 @@ IoU (Intersection over Union): 예측된 영역과 실제 영역의 겹침 비�
 2. segmentation-models-3D
 3. psycopg
 
+***- 필요한  데이터셋***
+
+BraTS2020 Dataset
+
+https://www.kaggle.com/datasets/awsaf49/brats20-dataset-training-validation
+
 ## 프로젝트 사용법 
 
 ### 각 파일의 역할
@@ -344,19 +350,52 @@ IoU (Intersection over Union): 예측된 영역과 실제 영역의 겹침 비�
 ![image](https://github.com/user-attachments/assets/88824798-50a7-42a1-b8d8-8ed3a3049c69)
 
 ## 학습 결과
+Batch 크기: 2
+
+Epoch 수: 100
+
+Learning Rate: 0.0001
+
+(구글 코랩을 활용)
+
+***1. Training and validation loss***
 
 ![다운로드](https://github.com/user-attachments/assets/adb3e252-8c23-4bae-8479-d0ff57284466)
 
+손실 값이 꾸준히 감소하고 과적합 없이 안정적인 학습을 보여주었습니다.
+
+***2. Training and Validation Accuracy***
+
 ![다운로드 (1)](https://github.com/user-attachments/assets/73bc2d2f-20d7-485c-87ec-d2bd8c1fe9d9)
+
+학습 정확도와 검증 정확도가 약 99% 이상을 보여주었습니다.
+
+***3. 시각적 평가 및 IoU***
 
 ![Figure_1](https://github.com/user-attachments/assets/7ceb58ca-fe59-4938-8f72-167344e76340)
 
-## 프로젝트 결과
+IoU 0.8177로 높은 정확도로 세그먼트 수행했습니다.
+시각적 평가에서도 실제 마스크와 예측 결과가 유사하게 나타났습니다.
+
+### 종합 평가
+
+전반적으로 좋은 결과를 나타냈습니다.
+
+## 최종 실행화면
+
+***1. 환자의 MRI 이미지*** 
+
 ![1](https://github.com/user-attachments/assets/2c6631e4-8537-4bd2-ab49-be55996abc23)
+
+***2. 모델을 활용한 세그먼트 및 종양 부위 분석*** 
 
 ![2](https://github.com/user-attachments/assets/61c588e3-eec2-42c5-9d1a-65d9aef93777)
 
+***3. 환자 데이터와 증상 기반 예상 종양 부위 분석***
+
 ![3](https://github.com/user-attachments/assets/046bc788-71a4-402d-983a-e0ee8f42cf47)
+
+***4. 크로스 체크를 통한 최종 예상 종양 부위 및 관련 병원 명단***
 
 ![5](https://github.com/user-attachments/assets/d6644679-a612-406d-bf4b-b34c6cc8b1e1)
 
@@ -367,4 +406,6 @@ https://velog.io/@joongwon00/3D-UNET%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-CTMRI-
 https://medium.com/@msmapark2/u-net-%EB%85%BC%EB%AC%B8-%EB%A6%AC%EB%B7%B0-u-net-convolutional-networks-for-biomedical-image-segmentation-456d6901b28a
 
 https://bruders.tistory.com/77
+
+https://github.com/bnsreenu/python_for_microscopists
 
