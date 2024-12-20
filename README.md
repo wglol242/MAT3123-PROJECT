@@ -36,7 +36,7 @@
 
 ## 프로젝트 필수 개념
 
-< 더보기 클릭 >
+< 더보기 클릭 🖱️ >
 
 <details>
 <summary>U-Net</summary>
